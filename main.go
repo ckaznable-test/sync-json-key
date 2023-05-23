@@ -57,10 +57,7 @@ func getAllJsonFile(dir string) ([]JsonFile, error) {
 				return err
 			}
 
-			jsonFiles = append(jsonFiles, JsonFile{
-				path: path,
-				data: data,
-			})
+			jsonFiles = append(jsonFiles, JsonFile{path, data})
 		}
 
 		return nil
